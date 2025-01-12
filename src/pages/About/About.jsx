@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faHandHoldingHeart, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
 import './About.css';
 
 function About() {
@@ -32,17 +34,17 @@ function About() {
           <h2>Our Values</h2>
           <div className="values-grid">
             <div className="value-item">
-              <img src="/src/assets/transparency-icon.png" alt="Transparency" />
+              <FontAwesomeIcon icon={faEye} size="3x" />
               <h3>Transparency</h3>
               <p>Clear and accurate information about all subsidy schemes</p>
             </div>
             <div className="value-item">
-              <img src="/src/assets/accessibility-icon.png" alt="Accessibility" />
+              <FontAwesomeIcon icon={faHandHoldingHeart} size="3x" />
               <h3>Accessibility</h3>
               <p>Making information easily available to all farmers</p>
             </div>
             <div className="value-item">
-              <img src="/src/assets/support-icon.png" alt="Support" />
+              <FontAwesomeIcon icon={faHandsHelping} size="3x" />
               <h3>Support</h3>
               <p>Dedicated assistance throughout the subsidy application process</p>
             </div>
