@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Home Section */
+.home {
+  padding-top: 80px;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, rgba(141, 244, 255, 0.8), rgba(0, 0, 0, 0.7)), 
+              url('/src/assets/finance-hero.webp') no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+.hero .cta-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  background-color: #1a4d2e;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .cta-button:hover {
+  background-color: #145d29;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+  padding: 5rem 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer (Optional Section) */
+footer {
+  background-color: #1a4d2e;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .cta-button {
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .features {
+    padding: 3rem 5%;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}

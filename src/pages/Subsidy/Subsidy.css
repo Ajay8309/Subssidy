@@ -1,0 +1,190 @@
+
+
+.subsidy-layout {
+  padding: 80px 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100vw;
+  /* margin-left: 90px; */
+  /* background-color: pink; */
+}
+
+/* Subsidy Overview Styles */
+.subsidy-overview {
+  padding: 2rem 0;
+}
+
+.subsidy-overview h1 {
+  color: #555;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.overview-description {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.category-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* Fixed height for all cards */
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-header {
+  background: linear-gradient(120deg, rgba(141, 244, 255, 0.8), rgba(0, 0, 0, 0.7)), url('/src/assets/finance-hero.jpg') no-repeat center center/cover;  background-size: cover;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.category-icon {
+  font-size: 2rem;
+}
+
+.category-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.schemes-list {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto; /* Enable vertical scrolling */
+  flex-grow: 1; /* Take remaining space */
+  scrollbar-width: thin;
+  scrollbar-color: #555 #f0f0f0;
+}
+
+/* Webkit scrollbar styles */
+.schemes-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.schemes-list::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.schemes-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(#555, #555), url('/src/assets/farm.jpg');
+  border-radius: 4px;
+}
+
+.scheme-item {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.scheme-item:hover {
+  background: #e8f5f5;
+  transform: translateX(5px);
+}
+
+.scheme-item h3 {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.scheme-item p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Individual Scheme Page Styles */
+.subsidy-scheme {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.subsidy-scheme h1 {
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.scheme-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scheme-content section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #555;
+}
+
+.scheme-content h2 {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.scheme-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.scheme-content li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.scheme-content li:before {
+  content: "•";
+  color: #555;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.scheme-content p {
+  line-height: 1.8;
+  color: #555;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  
+}
