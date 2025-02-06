@@ -11,6 +11,9 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import CMEGP from './pages/Subsidy/schemes/CMEGP';
 import { NHM, NHB, NABARD } from './pages/Subsidy/schemes/NHM';
+import AgricultureSubsidy from './pages/Subsidy/schemes/AgricultureSubsidy';
+import StorageSubsidy from './pages/Subsidy/schemes/StorageSubsidy';
+import ProcessingProjects from './pages/Subsidy/schemes/ProcessingProjects';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
             <Route path="nhm" element={<NHM />} />
             <Route path="nhb" element={<NHB />} />
             <Route path="nabard" element={<NABARD />} />
+            <Route path="agriculture" element={<AgricultureSubsidy />} />
+            <Route path="storage" element={<StorageSubsidy />} />
+            <Route path="processing" element={<ProcessingProjects />} />
 
           </Route>
           <Route path="/finance" element={<Finance />} />

@@ -1,15 +1,15 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHandHoldingHeart, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
 import './About.css';
 
 function About() {
   return (
-    <div className="about">
+    <div className="about-us">
       <div className="about-hero">
-        <h1>About Bharat Subsidy</h1>
+        <h1>About Mahabizguru</h1>
         <p>
-          Empowering Indian farmers and agricultural entrepreneurs by providing reliable and 
-          comprehensive information on government subsidies and support schemes.
+          We are a dynamic team of Chartered Accountants providing business and industrial advisory services, specializing in subsidy consultancy, registrations, finance, and more.
         </p>
       </div>
 
@@ -36,17 +36,17 @@ function About() {
             <div className="value-item">
               <FontAwesomeIcon icon={faEye} size="3x" />
               <h3>Transparency</h3>
-              <p>Clear and accurate information about all subsidy schemes</p>
+              <p>Clear and accurate information about all subsidy schemes.</p>
             </div>
             <div className="value-item">
               <FontAwesomeIcon icon={faHandHoldingHeart} size="3x" />
               <h3>Accessibility</h3>
-              <p>Making information easily available to all farmers</p>
+              <p>Making information easily available to all farmers.</p>
             </div>
             <div className="value-item">
               <FontAwesomeIcon icon={faHandsHelping} size="3x" />
               <h3>Support</h3>
-              <p>Dedicated assistance throughout the subsidy application process</p>
+              <p>Dedicated assistance throughout the subsidy application process.</p>
             </div>
           </div>
         </section>

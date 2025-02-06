@@ -1,11 +1,12 @@
+// Contact.js
 import './Contact.css';
 
 function Contact() {
   return (
     <div className="contact">
       <div className="contact-hero">
-        <h1>Contact Us</h1>
-        <p>Have questions about agricultural subsidies? We're here to help!</p>
+        <h1>Contact Mahabizguru</h1>
+        <p>Have questions about business subsidies, finance, or registration? We are here to assist you.</p>
       </div>
       
       <div className="contact-container">
@@ -14,29 +15,29 @@ function Contact() {
           
           <div className="info-item">
             <h3>Address</h3>
-            <p>123 Agriculture Road, New Delhi, India</p>
+            <p>Office No. 304, “Status Point”, Near S P College, Sadashiv Peth, Pune 411030, MH, India</p>
           </div>
           
           <div className="info-item">
             <h3>Email</h3>
-            <p>info@bharatsubsidy.com</p>
+            <p>mahabizguru@gmail.com</p>
           </div>
           
           <div className="info-item">
             <h3>Phone</h3>
-            <p>+91 1234567890</p>
+            <p>+91 7030140224</p>
           </div>
         </div>
 
         <form className="contact-form">
           <div className="form-group">
-            <label htmlFor="name">First Name</label>
-            <input type="text" id="name" name="name" required />
+            <label htmlFor="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="name">Last Name</label>
-            <input type="text" id="name" name="name" required />
+            <label htmlFor="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required />
           </div>
 
           <div className="form-group">
@@ -45,8 +46,8 @@ function Contact() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="text">Phone no.</label>
-            <input type="text" id="email" name="email" required />
+            <label htmlFor="phone">Phone No.</label>
+            <input type="text" id="phone" name="phone" required />
           </div>
 
           <div className="form-group">
