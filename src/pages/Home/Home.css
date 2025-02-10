@@ -78,7 +78,7 @@ body {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-content: center;
 }
@@ -96,11 +96,6 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.feature-card img {
-  width: 80px;
-  margin-bottom: 1rem;
-}
-
 .feature-card h3 {
   font-size: 1.8rem;
   color: #444;
@@ -113,13 +108,38 @@ body {
   line-height: 1.6;
 }
 
-/* Footer (Optional Section) */
-footer {
-  background-color: #1a4d2e;
-  color: white;
+/* Case Studies Section */
+.case-studies {
+  padding: 4rem 10%;
+  background-color: #f9f9f9;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
+}
+
+.case-studies h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.case-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.case-card h4 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #444;
 }
 
 /* Responsive Design */
@@ -152,15 +172,11 @@ footer {
     margin-bottom: 1.5rem;
   }
 
-  .feature-card {
-    padding: 1.5rem;
+  .case-studies {
+    padding: 3rem 5%;
   }
 
-  .feature-card h3 {
-    font-size: 1.5rem;
-  }
-
-  .feature-card p {
-    font-size: 0.9rem;
+  .case-grid {
+    grid-template-columns: 1fr;
   }
 }

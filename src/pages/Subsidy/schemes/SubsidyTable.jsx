@@ -5,35 +5,35 @@ const SubsidyTable = ({ title, subsidyData }) => {
     <div style={styles.container}>
       <h1 style={styles.heading}>{title}</h1>
 
-      {/* Table Section */}
-      <table style={styles.table}>
-        <thead>
-          <tr style={styles.headerRow}>
-            <th style={styles.headerCell}>Project Name</th>
-            <th style={styles.headerCell}>Subsidy (%)</th>
-            <th style={styles.headerCell}>Incentives</th>
-            <th style={styles.headerCell}>Term Loan Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          {subsidyData.map((item, index) => (
-            <tr key={index} style={index % 2 === 0 ? styles.evenRow : styles.oddRow}>
-              <td style={styles.cell}>{item.project}</td>
-              <td style={styles.cell}>{item.subsidy}</td>
-              <td style={styles.cell}>{item.incentives}</td>
-              <td style={styles.cell}>{item.loanRequired}</td>
+      <div style={styles.tableContainer}>
+        <table style={styles.table}>
+          <thead>
+            <tr style={styles.headerRow}>
+              <th style={styles.headerCell}>Project Name</th>
+              <th style={styles.headerCell}>Subsidy (%)</th>
+              <th style={styles.headerCell}>Incentives</th>
+              <th style={styles.headerCell}>Term Loan Required</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {subsidyData.map((item, index) => (
+              <tr key={index} style={index % 2 === 0 ? styles.evenRow : styles.oddRow}>
+                <td style={styles.cell}>{item.project}</td>
+                <td style={styles.cell}>{item.subsidy}</td>
+                <td style={styles.cell}>{item.incentives}</td>
+                <td style={styles.cell}>{item.loanRequired}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      {/* Additional Information Section */}
+      {/* Scrollable Cards */}
       <div style={styles.detailsGrid}>
         <div style={styles.detailsBlock}>
           <h2 style={styles.subheading}>Subsidy Amount</h2>
           <p>Percentage of eligible cost as per respective department norms. Eligible cost for subsidy may be less than your total project cost.</p>
         </div>
-
         <div style={styles.detailsBlock}>
           <h2 style={styles.subheading}>Incentives</h2>
           <ul style={styles.list}>
@@ -46,12 +46,10 @@ const SubsidyTable = ({ title, subsidyData }) => {
             <li>Electricity duty (100%)</li>
           </ul>
         </div>
-
         <div style={styles.detailsBlock}>
           <h2 style={styles.subheading}>F/V/F/F/M</h2>
           <p>Fruits, Vegetables, Flowers, Fish, Meat</p>
         </div>
-
         <div style={styles.detailsBlock}>
           <h2 style={styles.subheading}>Term Loan</h2>
           <p>Term loan is mandatory to apply for this subsidy scheme.</p>
@@ -61,21 +59,24 @@ const SubsidyTable = ({ title, subsidyData }) => {
   );
 };
 
-// ✅ CSS-in-JS Styles
+// ✅ Updated Styles with Scrollable Cards
 const styles = {
   container: {
     textAlign: "center",
-    padding: "3rem",
+    padding: "2rem",
     maxWidth: "1200px",
     margin: "auto",
   },
   heading: {
-    fontSize: "2.5rem",
+    fontSize: "2.2rem",
     background: "linear-gradient(120deg, rgba(141, 244, 255, 0.8), rgba(0, 0, 0, 0.7))",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     fontWeight: "bold",
     marginBottom: "2rem",
+  },
+  tableContainer: {
+    overflowX: "auto",
   },
   table: {
     width: "100%",
@@ -83,7 +84,7 @@ const styles = {
     borderRadius: "12px",
     overflow: "hidden",
     boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
-    fontSize: "1.2rem",
+    fontSize: "1.1rem",
   },
   headerRow: {
     background: "linear-gradient(120deg, rgba(141, 244, 255, 0.8), rgba(0, 0, 0, 0.7))",
@@ -91,11 +92,11 @@ const styles = {
     textAlign: "left",
   },
   headerCell: {
-    padding: "18px",
+    padding: "14px",
     fontWeight: "bold",
   },
   cell: {
-    padding: "18px",
+    padding: "14px",
     borderBottom: "1px solid #ddd",
   },
   evenRow: {
@@ -106,7 +107,7 @@ const styles = {
   },
   detailsGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
     gap: "1.5rem",
     background: "linear-gradient(120deg, rgba(141, 244, 255, 0.1), rgba(0, 0, 0, 0.03))",
     padding: "2rem",
@@ -119,17 +120,31 @@ const styles = {
     padding: "1.5rem",
     borderRadius: "8px",
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    height: "200px", // ✅ Ensures even height
+    overflowY: "auto", // ✅ Enables scrolling for overflow content
+    textAlign: "left",
   },
   subheading: {
-    fontSize: "1.8rem",
+    fontSize: "1.6rem",
     color: "#333",
     fontWeight: "bold",
     marginBottom: "1rem",
   },
   list: {
     textAlign: "left",
-    marginLeft: "1.5rem",
-    lineHeight: "1.8",
+    marginLeft: "1.2rem",
+    lineHeight: "1.6",
+  },
+  '@media (max-width: 768px)': {
+    heading: {
+      fontSize: "1.8rem",
+    },
+    table: {
+      fontSize: "1rem",
+    },
+    subheading: {
+      fontSize: "1.4rem",
+    },
   },
 };
 

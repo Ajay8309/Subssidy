@@ -20,24 +20,25 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/subsidy" element={<SubsidyLayout />}>
-            <Route path="pmegp" element={<PMEGP />} />
-            <Route path="cmegp" element={<CMEGP />} />
-            <Route path="nhm" element={<NHM />} />
-            <Route path="nhb" element={<NHB />} />
-            <Route path="nabard" element={<NABARD />} />
-            <Route path="agriculture" element={<AgricultureSubsidy />} />
-            <Route path="storage" element={<StorageSubsidy />} />
-            <Route path="processing" element={<ProcessingProjects />} />
-
-          </Route>
-          <Route path="/finance" element={<Finance />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/subsidy" element={<SubsidyLayout />}>
+              <Route path="pmegp" element={<PMEGP />} />
+              <Route path="cmegp" element={<CMEGP />} />
+              <Route path="nhm" element={<NHM />} />
+              <Route path="nhb" element={<NHB />} />
+              <Route path="nabard" element={<NABARD />} />
+              <Route path="agriculture" element={<AgricultureSubsidy />} />
+              <Route path="storage" element={<StorageSubsidy />} />
+              <Route path="processing" element={<ProcessingProjects />} />
+            </Route>
+            <Route path="/finance" element={<Finance />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

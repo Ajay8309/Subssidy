@@ -37,23 +37,19 @@ function Navbar() {
         <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
         <li><Link to="/about" onClick={closeMobileMenu}>About Us</Link></li>
 
-        {/* Subsidy Dropdown - Shows Project Categories */}
         <li
           className={`dropdown ${openDropdown === "subsidy" ? "active" : ""}`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Link to="/subsidy" className="dropdown-title" onClick={closeMobileMenu}>
+          <Link to="/" className="dropdown-title" onClick={closeMobileMenu}>
+
             Subsidies
           </Link>
           <div className="dropdown-content">
             <Link to="/subsidy/agriculture" onClick={closeMobileMenu}>Agriculture & Allied</Link>
             <Link to="/subsidy/storage" onClick={closeMobileMenu}>Storage & Processing</Link>
             <Link to="/subsidy/processing" onClick={closeMobileMenu}>Processing Units</Link>
-            <Link to="/subsidy/msme" onClick={closeMobileMenu}>MSME</Link>
-            <Link to="/subsidy/renewable-energy" onClick={closeMobileMenu}>Renewable Energy</Link>
-            <Link to="/subsidy/tourism" onClick={closeMobileMenu}>Tourism</Link>
-            <Link to="/subsidy/technology" onClick={closeMobileMenu}>Technology</Link>
           </div>
         </li>
 

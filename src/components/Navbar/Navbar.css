@@ -14,8 +14,10 @@
 
 .navbar-brand {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+      /* border: 2px solid red; */
+      justify-content: space-between;
+      align-items: center;
+      /* width: 100vw; */
 }
 
 .navbar-brand .h21 {
@@ -172,9 +174,13 @@
 }
 
 /* ✅ Mobile-Friendly Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 975px) {
   .mobile-menu-toggle {
     display: block;
+  }
+
+  .navbar-brand {
+    width: 100vw;
   }
 
   .nav-links {
