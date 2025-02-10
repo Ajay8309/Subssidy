@@ -1,28 +1,49 @@
 import { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
+import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
 
 function Contact() {
   const form = useRef();
-  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const formData = new FormData(form.current);
+    let newErrors = {};
+
+    // Loop through all fields and check for empty values
+    for (let [key, value] of formData.entries()) {
+      if (!value.trim()) {
+        newErrors[key] = "This field is required!";
+      }
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!validateForm()) {
+      toast.error("❌ Please fill in all required fields!", { position: "top-right" });
+      return;
+    }
+
     emailjs
       .sendForm(
-        "service_nlncu8r", 
-        "template_rr1pafg", 
+        "service_nlncu8r",
+        "template_rr1pafg",
         form.current,
-        "G1lLBAGQHCAQ5E5EN" 
+        "G1lLBAGQHCAQ5E5EN"
       )
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           toast.success("✅ Message sent successfully!", { position: "top-right" });
           form.current.reset();
+          setErrors({});
         },
         (error) => {
           console.log("FAILED...", error);
@@ -33,8 +54,8 @@ function Contact() {
 
   return (
     <div className="contact">
-      <ToastContainer /> 
-      
+      <ToastContainer />
+
       <div className="contact-hero">
         <h1>Contact Mahabizguru</h1>
         <p>Have questions about business subsidies, finance, or registration? We are here to assist you.</p>
@@ -60,27 +81,57 @@ function Contact() {
         <form ref={form} className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required />
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              className={errors.firstName ? "error" : ""}
+            />
+            {errors.firstName && <p className="error-text">{errors.firstName}</p>}
           </div>
 
           <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required />
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              className={errors.lastName ? "error" : ""}
+            />
+            {errors.lastName && <p className="error-text">{errors.lastName}</p>}
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className={errors.email ? "error" : ""}
+            />
+            {errors.email && <p className="error-text">{errors.email}</p>}
           </div>
 
           <div className="form-group">
             <label htmlFor="phone">Phone No.</label>
-            <input type="text" id="phone" name="phone" required />
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              className={errors.phone ? "error" : ""}
+            />
+            {errors.phone && <p className="error-text">{errors.phone}</p>}
           </div>
 
           <div className="form-group">
             <label htmlFor="subject">Requirements</label>
-            <textarea id="subject" name="subject" rows="4" required></textarea>
+            <textarea
+              id="subject"
+              name="subject"
+              rows="4"
+              className={errors.subject ? "error" : ""}
+            ></textarea>
+            {errors.subject && <p className="error-text">{errors.subject}</p>}
           </div>
 
           <button type="submit">Send Message</button>
