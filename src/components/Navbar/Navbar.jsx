@@ -42,7 +42,7 @@ function Navbar() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Link to="/" className="dropdown-title" onClick={closeMobileMenu}>
+          <Link className="dropdown-title" onClick={closeMobileMenu}>
 
             Subsidies
           </Link>
